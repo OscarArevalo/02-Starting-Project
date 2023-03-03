@@ -1,19 +1,19 @@
 name: Test Project
 on: workflow_dispatch
 jobs:
-  auto-test:
+  auto-test: 
     runs-on: ubuntu-latest
-    steps:
-      - name: Pull to runner
-        uses: actions/checkout@v3
-            # el runner ya trae la version 18 por defecto, pero, para demostrar como, se agrega manualmente node
-      - name: Install nodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-            # al igual que install "ci" tambien instala las dependencias de node, pero, con las versiones declaradas dentro de package-lock.json
-        run: npm ci
-      - name: Run test
-             # script de test definido dentro de package.json
-        run: npm test
+    steps: 
+    - name: Pull to runner
+      uses: actions/checkout@v3
+      
+    - name: Install nodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies    
+      run: npm ci
+
+    - name: Run test    
+      run: npm test
