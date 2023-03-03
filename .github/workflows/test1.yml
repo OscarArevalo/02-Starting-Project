@@ -19,6 +19,7 @@ jobs:
       run: npm test
       
   deploy:
+    needs: auto-test
     runs-on: ubuntu-latest
     steps:
     - name: Pull to runner
