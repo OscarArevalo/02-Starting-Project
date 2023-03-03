@@ -1,9 +1,9 @@
 name: Test Project
-on: [push]
+on: push
 jobs:
-  auto-test: 
+  auto-test:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Pull to runner
         uses: actions/checkout@v3
             # el runner ya trae la version 18 por defecto, pero, para demostrar como, se agrega manualmente node
@@ -17,4 +17,3 @@ jobs:
       - name: Run test
             # script de test definido dentro de package.json
         run: npm test
-
