@@ -10,10 +10,10 @@ jobs:
       - name: Install nodeJS
         uses: actions/setup-node@v3
         with:
-            node-version: 18
+          node-version: 18
       - name: Install dependencies
             # al igual que install "ci" tambien instala las dependencias de node, pero, con las versiones declaradas dentro de package-lock.json
         run: npm ci
       - name: Run test
-            # script de test definido dentro de package.json
+             # script de test definido dentro de package.json
         run: npm test
